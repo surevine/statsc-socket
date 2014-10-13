@@ -43,14 +43,14 @@ describe('Statsc socket', function() {
         should(statscLibrary.getReceived()).be.null
     })
     
-    it('Does not respond to a non \'statsd.tick\' event', function() {
-        socket.emit('data', { data: [ 'statsg.money' ] })
+    it('Does not respond to a non \'statsc.tick\' event', function() {
+        socket.emit('statsg.money', {})
         should(statscLibrary.getReceived()).be.null
     })
     
-    it('Processes received \'statsd.tick\' event', function() {
+    it('Processes received \'statsc.tick\' event', function() {
         var data = { some: { nice: 'data' } }
-        socket.emit('data', { data: [ 'statsd.tick', data ] })
+        socket.emit('statsc.tick', data)
         statscLibrary.getReceived().should.eql(data)
     })
     
