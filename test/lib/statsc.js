@@ -4,7 +4,7 @@ var mockery = require('mockery')
   , should = require('should')
 
 var events = require('events')
-  , statsd = { some: 'object' }
+  , statsd = '127.0.0.1:8127'
   , StatscLibrary = require('../utils/statsc-library')
 
 /* jshint -W030 */
@@ -15,7 +15,6 @@ describe('Statsc socket', function() {
       , statscLibrary = null
     
     beforeEach(function() {
-        
         mockery.enable()
         
         statscLibrary = new StatscLibrary()
@@ -32,6 +31,12 @@ describe('Statsc socket', function() {
         socket = null
         statsc = null
         mockery.disable()
+    })
+    
+    it('Should throw an error if statsd is not an address', function() {
+        (function() {
+            new Statsc(socket, {an:'object'})
+        }).should.throw(Error)
     })
     
     it('Is passed \'statsd\' to setAddress', function() {
