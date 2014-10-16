@@ -7,7 +7,7 @@
     "test": "grunt test"
   },
   "author": "Martin Hewitt <martin.hewitt@surevine.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "statsc": "https://github.com/surevine/statsc/tarball/master"
   },
