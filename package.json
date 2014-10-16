@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/surevine/statsc-socket",
   "dependencies": {
-    "statsc": "https://github.com/surevine/statsc/tarball/master"
+    "statsc": "https://github.com/surevine/statsc/tarball/master",
+    "underscore": "^1.7.0"
   },
   "devDependencies": {
     "mocha": "^1.21.4",
