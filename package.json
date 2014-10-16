@@ -1,6 +1,6 @@
 {
   "name": "statsc-socket",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,8 +16,6 @@
     "url": "https://github.com/surevine/statsc-socket/issues"
   },
   "homepage": "https://github.com/surevine/statsc-socket",
-  "author": "Martin Hewitt <martin.hewitt@surevine.com>",
-  "license": "MIT",
   "dependencies": {
     "statsc": "https://github.com/surevine/statsc/tarball/master"
   },
