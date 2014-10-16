@@ -13,6 +13,7 @@ describe('Statsc socket', function() {
     var statsc = null
       , socket = null
       , statscLibrary = null
+      , Statsc
     
     beforeEach(function() {
         mockery.enable()
@@ -21,7 +22,7 @@ describe('Statsc socket', function() {
 
         mockery.registerMock('statsc', statscLibrary)
         
-        var Statsc = require('../../index')
+        Statsc = require('../../index')
         socket = new events.EventEmitter()
         statsc = new Statsc(socket, statsd)
     })
